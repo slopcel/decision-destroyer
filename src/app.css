@@ -1,0 +1,69 @@
+:root {
+  --bg-dark: #0a0a0a;
+  --bg-card: rgba(20, 20, 20, 0.8);
+  --card-text: #ffffff;
+  --destruction-red: #ff0040;
+  --destruction-orange: #ff6b00;
+  --destruction-yellow: #ffd700;
+  --winner-green: #00ff6a;
+  --accent-blue: #00d4ff;
+  
+  --font-heading: 'Bebas Neue', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  
+  --shadow-glow: 0 0 20px rgba(255, 215, 0, 0.2);
+  --border-radius: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--bg-dark);
+}
+
+body {
+  font-family: var(--font-body);
+  color: #FFFFFF;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+.screen-shake { 
+  animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) both;
+  animation-iteration-count: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
